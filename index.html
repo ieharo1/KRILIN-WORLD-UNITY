@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende Go (Golang) desde cero con nuestra guía completa. Tutoriales, ejemplos prácticos y ejercicios.">
+    <meta name="author" content="Isaac Esteban Haro Torres">
+    <title>🐹 Golang Desde Cero - Guía Completa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">🐹 Golang Desde Cero</a>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#temas">Temas</a></li>
+                    <li><a href="#contenido">Contenido</a></li>
+                    <li><a href="#ejemplos">Ejemplos</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>🐹 Golang Desde Cero - Guía Completa</h1>
+                <p class="hero-subtitle">Aprende Go desde los fundamentos hasta conceptos avanzados</p>
+                <blockquote class="hero-quote">
+                    "Go is an open source programming language supported by Google that makes it easy to build simple, reliable, and efficient software."
+                </blockquote>
+                <a href="#temas" class="btn btn-primary">Explorar Temas</a>
+            </div>
+        </section>
+
+        <section id="temas" class="topics">
+            <div class="container">
+                <h2>📖 Temas del Curso</h2>
+                <p class="topics-intro">Haz clic en cualquier tema para ver el contenido detallado</p>
+
+                <div class="topics-grid">
+                    <!-- Módulo 1 -->
+                    <div class="topic-card" data-topic="topic1">
+                        <div class="topic-header">
+                            <span class="topic-icon">📌</span>
+                            <h3>Módulo 1: Fundamentos</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema1-1">Introducción a Go</a></li>
+                            <li><a href="#tema1-2">Instalación y configuración</a></li>
+                            <li><a href="#tema1-3">Variables y tipos de datos</a></li>
+                            <li><a href="#tema1-4">Funciones y control de flujo</a></li>
+                        </ul>
+                        <a href="#tema1-1" class="btn-topic">Ver tema →</a>
+                    </div>
+
+                    <!-- Módulo 2 -->
+                    <div class="topic-card" data-topic="topic2">
+                        <div class="topic-header">
+                            <span class="topic-icon">⚙️</span>
+                            <h3>Módulo 2: Intermedio</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema2-1">Structs y métodos</a></li>
+                            <li><a href="#tema2-2">Interfaces</a></li>
+                            <li><a href="#tema2-3">Concurrencia (goroutines, channels)</a></li>
+                            <li><a href="#tema2-4">Manejo de errores</a></li>
+                        </ul>
+                        <a href="#tema2-1" class="btn-topic">Ver tema →</a>
+                    </div>
+
+                    <!-- Módulo 3 -->
+                    <div class="topic-card" data-topic="topic3">
+                        <div class="topic-header">
+                            <span class="topic-icon">🚀</span>
+                            <h3>Módulo 3: Avanzado</h3>
+                        </div>
+                        <ul class="topic-list">
+                            <li><a href="#tema3-1">APIs HTTP/REST</a></li>
+                            <li><a href="#tema3-2">gRPC y Protocol Buffers</a></li>
+                            <li><a href="#tema3-3">Microservicios</a></li>
+                            <li><a href="#tema3-4">CLI tools con Cobra</a></li>
+                        </ul>
+                        <a href="#tema3-1" class="btn-topic">Ver tema →</a>
+                    </div>
+                </div>
+
+                <!-- Contenido Detallado de Temas -->
+                <div class="topic-content" id="topic-content">
+                    <!-- Tema 1-1 -->
+                    <div class="content-detail" id="tema1-1">
+                        <h3>📌 Introducción a Go</h3>
+                        <div class="content-body">
+                            <p><strong>¿Qué es Go?</strong> Go (también conocido como Golang) es un lenguaje de programación de código abierto desarrollado por Google en 2007 por Robert Griesemer, Rob Pike y Ken Thompson. Fue diseñado para ser simple, rápido y eficiente en el manejo de concurrencia.</p>
+
+                            <h4>Características principales:</h4>
+                            <ul>
+                                <li><strong>Rápido:</strong> Compilación rápida y ejecución eficiente</li>
+                                <li><strong>Simple:</strong> Sintaxis limpia y fácil de aprender</li>
+                                <li><strong>Concurrente:</strong> Goroutines y channels para concurrencia nativa</li>
+                                <li><strong>Tipado estático:</strong> Detección de errores en tiempo de compilación</li>
+                            </ul>
+
+                            <h4>Historia de Go:</h4>
+                            <table class="info-table">
+                                <tr>
+                                    <th>Año</th>
+                                    <th>Evento</th>
+                                </tr>
+                                <tr>
+                                    <td>2007</td>
+                                    <td>Diseño inicial por Pike, Thompson y Griesemer</td>
+                                </tr>
+                                <tr>
+                                    <td>2009</td>
+                                    <td>Anuncio oficial y lanzamiento</td>
+                                </tr>
+                                <tr>
+                                    <td>2012</td>
+                                    <td>Go 1.0 - Promesa de compatibilidad</td>
+                                </tr>
+                                <tr>
+                                    <td>2024</td>
+                                    <td>Go 1.22+ con mejoras continuas</td>
+                                </tr>
+                            </table>
+
+                            <div class="info-box">
+                                <strong>💡 Dato curioso:</strong> El mascot de Go es el Gopher, diseñado por Renée French. Los gophers son roedores relacionados con las ardillas.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-2 -->
+                    <div class="content-detail" id="tema1-2">
+                        <h3>🔧 Instalación y Configuración</h3>
+                        <div class="content-body">
+                            <h4>En Windows:</h4>
+                            <ol>
+                                <li>Descarga Go desde <a href="https://go.dev/dl/" target="_blank">go.dev/dl</a></li>
+                                <li>Ejecuta el instalador MSI</li>
+                                <li>Acepta la instalación en C:\Go (por defecto)</li>
+                                <li>Abre una nueva terminal y verifica: <code>go version</code></li>
+                            </ol>
+
+                            <h4>En macOS:</h4>
+                            <pre><code># Con Homebrew
+brew install go
+
+# Verificar instalación
+go version
+
+# Configurar GOPATH (opcional en Go 1.16+)
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin</code></pre>
+
+                            <h4>En Linux (Ubuntu/Debian):</h4>
+                            <pre><code># Descargar última versión
+wget https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+
+# Extraer en /usr/local
+sudo tar -C /usr/local -xzf go1.22.0.linux-amd64.tar.gz
+
+# Agregar al PATH (en ~/.bashrc o ~/.zshrc)
+export PATH=$PATH:/usr/local/go/bin
+
+# Recargar shell
+source ~/.bashrc
+
+# Verificar
+go version</code></pre>
+
+                            <h4>Configuración del entorno:</h4>
+                            <pre><code># Ver configuración actual
+go env
+
+# Establecer GOPROXY
+go env -w GOPROXY=https://proxy.golang.org,direct
+
+# Habilitar Go modules
+go env -w GO111MODULE=on
+
+# Verificar instalación
+go run hello.go</code></pre>
+
+                            <h4>Editor recomendado - VS Code:</h4>
+                            <pre><code># Instalar extensión Go en VS Code
+# La extensión instala automáticamente:
+# - gopls (language server)
+# - delve (debugger)
+# - golangci-lint (linter)
+# - gotests (generador de tests)</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-3 -->
+                    <div class="content-detail" id="tema1-3">
+                        <h3>📦 Variables y Tipos de Datos</h3>
+                        <div class="content-body">
+                            <h4>Declaración de variables:</h4>
+                            <pre><code>package main
+
+import "fmt"
+
+func main() {
+    // Declaración explícita
+    var nombre string = "Juan"
+    var edad int = 30
+    
+    // Inferencia de tipo (short declaration)
+    pais := "España"
+    activo := true
+    
+    // Múltiples variables
+    var x, y, z int = 1, 2, 3
+    a, b := 10, 20
+    
+    // Variable sin valor inicial (zero value)
+    var contador int      // 0
+    var precio float64    // 0.0
+    var nombre2 string    // ""
+    var estado bool       // false
+    
+    fmt.Println(nombre, edad, pais, activo)
+}</code></pre>
+
+                            <h4>Tipos de datos básicos:</h4>
+                            <pre><code>// Strings
+var texto string = "Hola Mundo"
+multilinea := `Esto es un
+texto de múltiples
+líneas`
+
+// Números enteros
+var entero int = 42
+var entero8 int8 = 127
+var entero32 int32 = 1000
+var entero64 int64 = 9223372036854775807
+var sinSigno uint = 100
+
+// Números flotantes
+var decimal float32 = 3.14
+var doble float64 = 3.14159265359
+
+// Booleanos
+var verdadero bool = true
+var falso bool = false
+
+// Byte y rune
+var byteVal byte = 'A'      // alias de uint8
+var runeVal rune = 'ñ'      // alias de int32</code></pre>
+
+                            <h4>Constantes:</h4>
+                            <pre><code>const PI = 3.1416
+const (
+    Enero = 1
+    Febrero = 2
+    Marzo = 3
+)
+
+// iota para enumeraciones
+const (
+    Domingo = iota  // 0
+    Lunes           // 1
+    Martes          // 2
+    Miercoles       // 3
+    Jueves          // 4
+    Viernes         // 5
+    Sabado          // 6
+)</code></pre>
+
+                            <h4>Conversión de tipos:</h4>
+                            <pre><code>var entero int = 42
+var decimal float64 = float64(entero)
+
+var numero int64 = 100
+var convertido int = int(numero)
+
+// String a int
+import "strconv"
+num, _ := strconv.Atoi("42")
+
+// int a String
+texto := strconv.Itoa(42)</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 1-4 -->
+                    <div class="content-detail" id="tema1-4">
+                        <h3>🔷 Funciones y Control de Flujo</h3>
+                        <div class="content-body">
+                            <h4>Declaración de funciones:</h4>
+                            <pre><code>package main
+
+import "fmt"
+
+// Función básica
+func saludar() {
+    fmt.Println("Hola!")
+}
+
+// Función con parámetros
+func saludarPersona(nombre string) {
+    fmt.Println("Hola", nombre)
+}
+
+// Función con valor por defecto (no existe en Go)
+// Usar patrón alternativo
+func saludarOpcional(nombre ...string) {
+    n := "Invitado"
+    if len(nombre) > 0 {
+        n = nombre[0]
+    }
+    fmt.Println("Hola", n)
+}
+
+// Múltiples retornos
+func dividir(a, b float64) (float64, error) {
+    if b == 0 {
+        return 0, fmt.Errorf("división por cero")
+    }
+    return a / b, nil
+}
+
+// Retornos nombrados
+func operar(a, b int) (suma, resta int) {
+    suma = a + b
+    resta = a - b
+    return  // naked return
+}</code></pre>
+
+                            <h4>Control de flujo - if/else:</h4>
+                            <pre><code>// if básico
+if edad >= 18 {
+    fmt.Println("Mayor de edad")
+}
+
+// if con inicialización
+if edad := obtenerEdad(); edad >= 18 {
+    fmt.Println("Mayor de edad")
+}
+
+// if-else
+if nota >= 90 {
+    fmt.Println("Excelente")
+} else if nota >= 70 {
+    fmt.Println("Aprobado")
+} else {
+    fmt.Println("Reprobado")
+}</code></pre>
+
+                            <h4>Control de flujo - switch:</h4>
+                            <pre><code>// switch básico
+dia := "lunes"
+switch dia {
+case "lunes":
+    fmt.Println("Inicio de semana")
+case "viernes":
+    fmt.Println("Fin de semana")
+default:
+    fmt.Println("Día normal")
+}
+
+// switch sin condición (como if-else)
+switch {
+case nota >= 90:
+    fmt.Println("A")
+case nota >= 80:
+    fmt.Println("B")
+default:
+    fmt.Println("C")
+}
+
+// switch con caída (fallthrough)
+switch nivel {
+case 1:
+    fmt.Println("Nivel 1")
+    fallthrough
+case 2:
+    fmt.Println("Nivel 1 y 2")
+}</code></pre>
+
+                            <h4>Control de flujo - for:</h4>
+                            <pre><code>// for tradicional
+for i := 0; i < 10; i++ {
+    fmt.Println(i)
+}
+
+// for como while
+i := 0
+for i < 10 {
+    fmt.Println(i)
+    i++
+}
+
+// for infinito
+for {
+    // break para salir
+    if condicion {
+        break
+    }
+}
+
+// for range (arrays, slices, maps, strings)
+numeros := []int{1, 2, 3, 4, 5}
+for indice, valor := range numeros {
+    fmt.Println(indice, valor)
+}
+
+// Solo valor
+for _, valor := range numeros {
+    fmt.Println(valor)
+}
+
+// Solo índice
+for indice := range numeros {
+    fmt.Println(indice)
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Go solo tiene for para bucles. No existe while o do-while, pero for puede comportarse como ellos.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-1 -->
+                    <div class="content-detail" id="tema2-1">
+                        <h3>🏗️ Structs y Métodos</h3>
+                        <div class="content-body">
+                            <h4>Definición de structs:</h4>
+                            <pre><code>package main
+
+import "fmt"
+
+// Definición de struct
+type Persona struct {
+    Nombre string
+    Edad   int
+    Email  string
+}
+
+// Crear instancia
+func main() {
+    // Forma 1
+    p1 := Persona{"Juan", 30, "juan@email.com"}
+    
+    // Forma 2 (con nombres)
+    p2 := Persona{
+        Nombre: "Maria",
+        Edad:   25,
+        Email:  "maria@email.com",
+    }
+    
+    // Forma 3 (zero values)
+    var p3 Persona
+    p3.Nombre = "Carlos"
+    
+    // Acceder a campos
+    fmt.Println(p1.Nombre)
+    fmt.Println(p2.Edad)
+    
+    // Modificar campos
+    p1.Edad = 31
+    
+    fmt.Println(p1, p2, p3)
+}</code></pre>
+
+                            <h4>Métodos:</h4>
+                            <pre><code>type Persona struct {
+    Nombre string
+    Edad   int
+}
+
+// Método con receptor por valor
+func (p Persona) Saludar() string {
+    return "Hola, soy " + p.Nombre
+}
+
+// Método con receptor por pointer (modifica el original)
+func (p *Persona) CumplirAnios() {
+    p.Edad++
+}
+
+// Método con parámetros
+func (p Persona) Presentarse(lugar string) string {
+    return fmt.Sprintf("Soy %s y estoy en %s", p.Nombre, lugar)
+}
+
+func main() {
+    juan := Persona{"Juan", 30}
+    
+    fmt.Println(juan.Saludar())
+    juan.CumplirAnios()  // Ahora tiene 31
+    fmt.Println(juan.Presentarse("Madrid"))
+}</code></pre>
+
+                            <h4>Structs anidados (Composición):</h4>
+                            <pre><code>type Direccion struct {
+    Calle  string
+    Ciudad string
+    CP     string
+}
+
+type Empleado struct {
+    Persona    // Embedding (composición)
+    Direccion  // Embedding
+    Puesto     string
+    Salario    float64
+}
+
+func main() {
+    emp := Empleado{
+        Persona: Persona{
+            Nombre: "Ana",
+            Edad:   28,
+        },
+        Direccion: Direccion{
+            Calle:  "Calle Mayor",
+            Ciudad: "Madrid",
+            CP:     "28001",
+        },
+        Puesto:  "Desarrolladora",
+        Salario: 45000,
+    }
+    
+    // Acceso directo a campos embebidos
+    fmt.Println(emp.Nombre)  // Ana
+    fmt.Println(emp.Ciudad)  // Madrid
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Nota:</strong> Go no tiene herencia de clases. Usa composición (embedding) para reutilizar código.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-2 -->
+                    <div class="content-detail" id="tema2-2">
+                        <h3>🔌 Interfaces</h3>
+                        <div class="content-body">
+                            <h4>Definición de interfaces:</h4>
+                            <pre><code>package main
+
+import "fmt"
+
+// Interface define un conjunto de métodos
+type Hablador interface {
+    Hablar() string
+}
+
+type Escuchador interface {
+    Escuchar() string
+}
+
+// Interface que combina otras dos
+type Comunicador interface {
+    Hablador
+    Escuchador
+}
+
+// Implementación
+type Persona struct {
+    Nombre string
+}
+
+func (p Persona) Hablar() string {
+    return "Hola, soy " + p.Nombre
+}
+
+func (p Persona) Escuchar() string {
+    return p.Nombre + " está escuchando"
+}
+
+// Función que acepta interface
+func Interactuar(c Comunicador) {
+    fmt.Println(c.Hablar())
+    fmt.Println(c.Escuchar())
+}
+
+func main() {
+    juan := Persona{"Juan"}
+    Interactuar(juan)
+}</code></pre>
+
+                            <h4>Interface vacía (any):</h4>
+                            <pre><code>// interface{} acepta cualquier tipo (Go < 1.18)
+func imprimir(v interface{}) {
+    fmt.Println(v)
+}
+
+// any es alias de interface{} (Go 1.18+)
+func imprimir2(v any) {
+    fmt.Println(v)
+}
+
+// Type assertion
+func procesar(v interface{}) {
+    // Afirmación de tipo
+    str, ok := v.(string)
+    if ok {
+        fmt.Println("Es string:", str)
+        return
+    }
+    
+    num, ok := v.(int)
+    if ok {
+        fmt.Println("Es int:", num)
+        return
+    }
+}
+
+// Type switch
+func describir(v interface{}) {
+    switch t := v.(type) {
+    case int:
+        fmt.Println("Entero:", t)
+    case string:
+        fmt.Println("String:", t)
+    case bool:
+        fmt.Println("Booleano:", t)
+    default:
+        fmt.Printf("Tipo desconocido: %T\n", t)
+    }
+}</code></pre>
+
+                            <h4>Common interfaces:</h4>
+                            <pre><code>// Stringer - para representación string
+type Stringer interface {
+    String() string
+}
+
+func (p Persona) String() string {
+    return fmt.Sprintf("Persona(%s, %d)", p.Nombre, p.Edad)
+}
+
+// Error - para manejo de errores
+type error interface {
+    Error() string
+}
+
+type MiError struct {
+    Codigo int
+    Mensaje string
+}
+
+func (e MiError) Error() string {
+    return fmt.Sprintf("Error %d: %s", e.Codigo, e.Mensaje)
+}
+
+// Reader/Writer - para I/O
+type Reader interface {
+    Read(p []byte) (n int, err error)
+}
+
+type Writer interface {
+    Write(p []byte) (n int, err error)
+}</code></pre>
+
+                            <h4>Interfaces en la práctica:</h4>
+                            <pre><code>// Interface para repositorios
+type UsuarioRepository interface {
+    GetById(id int) (*Usuario, error)
+    GetAll() ([]*Usuario, error)
+    Create(u *Usuario) error
+    Update(u *Usuario) error
+    Delete(id int) error
+}
+
+// Implementación con base de datos
+type MySQLUsuarioRepository struct {
+    db *sql.DB
+}
+
+func (r *MySQLUsuarioRepository) GetById(id int) (*Usuario, error) {
+    // Implementación con SQL
+}
+
+// Implementación en memoria (para tests)
+type MemoryUsuarioRepository struct {
+    usuarios map[int]*Usuario
+}
+
+func (r *MemoryUsuarioRepository) GetById(id int) (*Usuario, error) {
+    // Implementación simple
+}</code></pre>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-3 -->
+                    <div class="content-detail" id="tema2-3">
+                        <h3>🔄 Concurrencia (Goroutines y Channels)</h3>
+                        <div class="content-body">
+                            <h4>Goroutines:</h4>
+                            <pre><code>package main
+
+import (
+    "fmt"
+    "time"
+)
+
+func tarea(id int) {
+    fmt.Printf("Tarea %d iniciada\n", id)
+    time.Sleep(time.Second)
+    fmt.Printf("Tarea %d completada\n", id)
+}
+
+func main() {
+    // Lanzar goroutine
+    go tarea(1)
+    
+    // Múltiples goroutines
+    for i := 0; i < 5; i++ {
+        go tarea(i)
+    }
+    
+    // Esperar un poco (no recomendado en producción)
+    time.Sleep(2 * time.Second)
+}</code></pre>
+
+                            <h4>WaitGroup:</h4>
+                            <pre><code>import (
+    "fmt"
+    "sync"
+    "time"
+)
+
+func main() {
+    var wg sync.WaitGroup
+    
+    for i := 0; i < 5; i++ {
+        wg.Add(1)  // Incrementar contador
+        
+        go func(id int) {
+            defer wg.Done()  // Decrementar al finalizar
+            fmt.Printf("Tarea %d\n", id)
+            time.Sleep(time.Second)
+        }(i)
+    }
+    
+    wg.Wait()  // Esperar todas las goroutines
+    fmt.Println("Todas completadas")
+}</code></pre>
+
+                            <h4>Channels:</h4>
+                            <pre><code>// Channel sin buffer
+ch := make(chan int)
+
+// Enviar valor
+ch <- 42
+
+// Recibir valor
+valor := <-ch
+
+// Channel con buffer
+chBuffer := make(chan int, 10)
+chBuffer <- 1
+chBuffer <- 2
+
+// Range sobre channel
+for v := range ch {
+    fmt.Println(v)
+}
+
+// Cerrar channel
+close(ch)</code></pre>
+
+                            <h4>Patrón worker pool:</h4>
+                            <pre><code>func worker(id int, jobs <-chan int, results chan<- int) {
+    for job := range jobs {
+        fmt.Printf("Worker %d procesando %d\n", id, job)
+        results <- job * 2
+    }
+}
+
+func main() {
+    jobs := make(chan int, 100)
+    results := make(chan int, 100)
+    
+    // Iniciar workers
+    for w := 1; w <= 3; w++ {
+        go worker(w, jobs, results)
+    }
+    
+    // Enviar trabajos
+    for j := 1; j <= 5; j++ {
+        jobs <- j
+    }
+    close(jobs)
+    
+    // Recibir resultados
+    for r := 1; r <= 5; r++ {
+        fmt.Println(<-results)
+    }
+}</code></pre>
+
+                            <h4>Select:</h4>
+                            <pre><code>func main() {
+        ch1 := make(chan string)
+        ch2 := make(chan string)
+        
+        go func() {
+            time.Sleep(time.Second)
+            ch1 <- "uno"
+        }()
+        
+        go func() {
+            time.Sleep(2 * time.Second)
+            ch2 <- "dos"
+        }()
+        
+        // Esperar el primero que llegue
+        select {
+        case msg1 := <-ch1:
+            fmt.Println("Recibido:", msg1)
+        case msg2 := <-ch2:
+            fmt.Println("Recibido:", msg2)
+        case <-time.After(time.Millisecond * 500):
+            fmt.Println("Timeout")
+        default:
+            fmt.Println("Sin datos disponibles")
+        }
+    }</code></pre>
+
+                            <div class="info-box">
+                                <strong>⚠️ Importante:</strong> No comuniques compartiendo memoria; comparte memoria comunicándote. Usa channels para sincronización segura.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 2-4 -->
+                    <div class="content-detail" id="tema2-4">
+                        <h3>⚠️ Manejo de Errores</h3>
+                        <div class="content-body">
+                            <h4>Patrón básico de errores:</h4>
+                            <pre><code>package main
+
+import (
+    "errors"
+    "fmt"
+)
+
+// Error básico
+func dividir(a, b float64) (float64, error) {
+    if b == 0 {
+        return 0, errors.New("división por cero")
+    }
+    return a / b, nil
+}
+
+// Uso
+resultado, err := dividir(10, 0)
+if err != nil {
+    fmt.Println("Error:", err)
+    return
+}
+fmt.Println("Resultado:", resultado)</code></pre>
+
+                            <h4>Errores personalizados:</h4>
+                            <pre><code>// Tipo de error personalizado
+type ErrorValidacion struct {
+    Campo   string
+    Mensaje string
+}
+
+func (e ErrorValidacion) Error() string {
+    return fmt.Sprintf("Error en %s: %s", e.Campo, e.Mensaje)
+}
+
+// Uso
+func validarEmail(email string) error {
+    if email == "" {
+        return ErrorValidacion{"email", "no puede estar vacío"}
+    }
+    if !strings.Contains(email, "@") {
+        return ErrorValidacion{"email", "debe contener @"}
+    }
+    return nil
+}
+
+// Verificar tipo de error
+err := validarEmail("")
+if err != nil {
+    var ve ErrorValidacion
+    if errors.As(err, &ve) {
+        fmt.Printf("Campo: %s, Mensaje: %s\n", ve.Campo, ve.Mensaje)
+    }
+}</code></pre>
+
+                            <h4>Envoltura de errores (Go 1.13+):</h4>
+                            <pre><code>import (
+    "fmt"
+    "errors"
+)
+
+func operar() error {
+    err := dividir(10, 0)
+    if err != nil {
+        // Envolver error con contexto
+        return fmt.Errorf("operar falló: %w", err)
+    }
+    return nil
+}
+
+// Desenvolver error
+err := operar()
+if err != nil {
+    // Verificar error original
+    if errors.Is(err, errors.New("división por cero")) {
+        fmt.Println("Es error de división")
+    }
+    
+    // Obtener error original
+    var original error
+    if errors.As(err, &original) {
+        fmt.Println("Error original:", original)
+    }
+}</code></pre>
+
+                            <h4>Patrón de errores sentinel:</h4>
+                            <pre><code>// Errores sentinel (predefinidos)
+var (
+    ErrNotFound     = errors.New("no encontrado")
+    ErrUnauthorized = errors.New("no autorizado")
+    ErrInvalidInput = errors.New("entrada inválida")
+)
+
+func buscarUsuario(id int) (*Usuario, error) {
+    if id <= 0 {
+        return nil, ErrInvalidInput
+    }
+    // ... búsqueda
+    return nil, ErrNotFound
+}
+
+// Uso
+usuario, err := buscarUsuario(-1)
+if errors.Is(err, ErrInvalidInput) {
+    fmt.Println("ID inválido")
+} else if errors.Is(err, ErrNotFound) {
+    fmt.Println("Usuario no encontrado")
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Best Practice:</strong> En Go, los errores son valores. Siempre verifica los errores y proporcionalos con contexto significativo.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-1 -->
+                    <div class="content-detail" id="tema3-1">
+                        <h3>🌐 APIs HTTP/REST</h3>
+                        <div class="content-body">
+                            <h4>Servidor HTTP básico:</h4>
+                            <pre><code>package main
+
+import (
+    "encoding/json"
+    "net/http"
+)
+
+type Usuario struct {
+    ID    int    `json:"id"`
+    Nombre string `json:"nombre"`
+    Email  string `json:"email"`
+}
+
+func main() {
+    http.HandleFunc("/api/usuarios", obtenerUsuarios)
+    http.HandleFunc("/api/usuarios/", obtenerUsuario)
+    
+    http.ListenAndServe(":8080", nil)
+}
+
+func obtenerUsuarios(w http.ResponseWriter, r *http.Request) {
+    if r.Method != http.MethodGet {
+        http.Error(w, "Método no permitido", http.StatusMethodNotAllowed)
+        return
+    }
+    
+    usuarios := []Usuario{
+        {ID: 1, Nombre: "Juan", Email: "juan@email.com"},
+        {ID: 2, Nombre: "Maria", Email: "maria@email.com"},
+    }
+    
+    w.Header().Set("Content-Type", "application/json")
+    json.NewEncoder(w).Encode(usuarios)
+}
+
+func obtenerUsuario(w http.ResponseWriter, r *http.Request) {
+    // Extraer ID del URL
+    id := r.URL.Path[len("/api/usuarios/"):]
+    
+    usuario := Usuario{ID: 1, Nombre: "Juan", Email: "juan@email.com"}
+    
+    w.Header().Set("Content-Type", "application/json")
+    json.NewEncoder(w).Encode(usuario)
+}</code></pre>
+
+                            <h4>Router con Gorilla Mux:</h4>
+                            <pre><code>import (
+    "github.com/gorilla/mux"
+)
+
+func main() {
+    r := mux.NewRouter()
+    
+    // Rutas
+    r.HandleFunc("/api/usuarios", GetUsuarios).Methods("GET")
+    r.HandleFunc("/api/usuarios/{id}", GetUsuario).Methods("GET")
+    r.HandleFunc("/api/usuarios", CreateUsuario).Methods("POST")
+    r.HandleFunc("/api/usuarios/{id}", UpdateUsuario).Methods("PUT")
+    r.HandleFunc("/api/usuarios/{id}", DeleteUsuario).Methods("DELETE")
+    
+    // Middleware
+    r.Use(loggingMiddleware)
+    r.Use(authMiddleware)
+    
+    http.ListenAndServe(":8080", r)
+}
+
+func GetUsuario(w http.ResponseWriter, r *http.Request) {
+    vars := mux.Vars(r)
+    id := vars["id"]
+    // ...
+}</code></pre>
+
+                            <h4>Middleware:</h4>
+                            <pre><code>// Logging middleware
+func loggingMiddleware(next http.Handler) http.Handler {
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+        start := time.Now()
+        next.ServeHTTP(w, r)
+        log.Printf("%s %s %v", r.Method, r.URL.Path, time.Since(start))
+    })
+}
+
+// CORS middleware
+func corsMiddleware(next http.Handler) http.Handler {
+    return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+        w.Header().Set("Access-Control-Allow-Origin", "*")
+        w.Header().Set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+        w.Header().Set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+        
+        if r.Method == "OPTIONS" {
+            w.WriteHeader(http.StatusOK)
+            return
+        }
+        
+        next.ServeHTTP(w, r)
+    })
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Para APIs más complejas, considera frameworks como Gin, Echo, o Fiber que ofrecen mejor rendimiento y características adicionales.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-2 -->
+                    <div class="content-detail" id="tema3-2">
+                        <h3>📡 gRPC y Protocol Buffers</h3>
+                        <div class="content-body">
+                            <h4>Definición del servicio (.proto):</h4>
+                            <pre><code>syntax = "proto3";
+
+package usuario;
+
+option go_package = "./proto";
+
+// Mensajes
+message UsuarioRequest {
+    int32 id = 1;
+}
+
+message UsuarioResponse {
+    int32 id = 1;
+    string nombre = 2;
+    string email = 3;
+}
+
+message UsuarioListResponse {
+    repeated UsuarioResponse usuarios = 1;
+}
+
+// Servicio
+service UsuarioService {
+    rpc GetUsuario(UsuarioRequest) returns (UsuarioResponse);
+    rpc ListUsuarios(UsuarioRequest) returns (UsuarioListResponse);
+    rpc CreateUsuario(UsuarioRequest) returns (UsuarioResponse);
+    rpc StreamUsuarios(UsuarioRequest) returns (stream UsuarioResponse);
+}</code></pre>
+
+                            <h4>Generar código Go:</h4>
+                            <pre><code># Instalar protoc y plugins
+go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
+
+# Generar código
+protoc --go_out=. --go_opt=paths=source_relative \
+       --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+       usuario.proto</code></pre>
+
+                            <h4>Servidor gRPC:</h4>
+                            <pre><code>type usuarioServer struct {
+    pb.UnimplementedUsuarioServiceServer
+}
+
+func (s *usuarioServer) GetUsuario(ctx context.Context, req *pb.UsuarioRequest) (*pb.UsuarioResponse, error) {
+    return &pb.UsuarioResponse{
+        Id: req.Id,
+        Nombre: "Juan",
+        Email: "juan@email.com",
+    }, nil
+}
+
+func main() {
+    lis, _ := net.Listen("tcp", ":50051")
+    s := grpc.NewServer()
+    
+    pb.RegisterUsuarioServiceServer(s, &usuarioServer{})
+    
+    log.Println("Servidor gRPC en :50051")
+    s.Serve(lis)
+}</code></pre>
+
+                            <h4>Cliente gRPC:</h4>
+                            <pre><code>func main() {
+    conn, _ := grpc.Dial("localhost:50051", grpc.WithInsecure())
+    defer conn.Close()
+    
+    client := pb.NewUsuarioServiceClient(conn)
+    
+    resp, _ := client.GetUsuario(context.Background(), &pb.UsuarioRequest{Id: 1})
+    
+    fmt.Printf("Usuario: %s (%s)\n", resp.Nombre, resp.Email)
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 gRPC vs REST:</strong> gRPC es más rápido, usa HTTP/2, soporta streaming bidireccional y tiene contratos fuertes con protobuf. Ideal para microservicios internos.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-3 -->
+                    <div class="content-detail" id="tema3-3">
+                        <h3>🏗️ Microservicios</h3>
+                        <div class="content-body">
+                            <h4>Arquitectura de microservicios:</h4>
+                            <pre><code>/cmd
+  /api-gateway
+  /user-service
+  /order-service
+  /product-service
+/internal
+  /pkg
+    /database
+    /auth
+    /middleware
+  /user
+    /handler
+    /service
+    /repository
+  /order
+    /handler
+    /service
+    /repository
+/config
+  /config.yaml
+/docker
+  /Dockerfile.api-gateway
+  /Dockerfile.user-service</code></pre>
+
+                            <h4>Configuración centralizada:</h4>
+                            <pre><code>// config/config.go
+type Config struct {
+    Server   ServerConfig
+    Database DatabaseConfig
+    Redis    RedisConfig
+}
+
+type ServerConfig struct {
+    Port string
+    Host string
+}
+
+func LoadConfig() (*Config, error) {
+    var config Config
+    
+    // Cargar desde archivo
+    file, _ := os.Open("config/config.yaml")
+    decoder := yaml.NewDecoder(file)
+    decoder.Decode(&config)
+    
+    // O desde variables de entorno
+    config.Server.Port = os.Getenv("SERVER_PORT")
+    
+    return &config, nil
+}</code></pre>
+
+                            <h4>Comunicación entre servicios:</h4>
+                            <pre><code>// Cliente HTTP entre servicios
+type UserServiceClient struct {
+    baseURL string
+    client  *http.Client
+}
+
+func NewUserServiceClient(baseURL string) *UserServiceClient {
+    return &UserServiceClient{
+        baseURL: baseURL,
+        client:  &http.Client{Timeout: 10 * time.Second},
+    }
+}
+
+func (c *UserServiceClient) GetUser(id int) (*User, error) {
+    resp, err := c.client.Get(fmt.Sprintf("%s/users/%d", c.baseURL, id))
+    if err != nil {
+        return nil, err
+    }
+    defer resp.Body.Close()
+    
+    var user User
+    json.NewDecoder(resp.Body).Decode(&user)
+    return &user, nil
+}</code></pre>
+
+                            <h4>Circuit Breaker:</h4>
+                            <pre><code>import "github.com/sony/gobreaker"
+
+var cb *gobreaker.CircuitBreaker
+
+func init() {
+    cb = gobreaker.NewCircuitBreaker(gobreaker.Settings{
+        Name:        "UserService",
+        Timeout:     30 * time.Second,
+        MaxRequests: 100,
+        Interval:    60 * time.Second,
+    })
+}
+
+func callUserService() (string, error) {
+    return cb.Execute(func() (interface{}, error) {
+        // Llamada al servicio
+        return getUserFromService()
+    })
+}</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Patrones:</strong> API Gateway, Service Discovery, Circuit Breaker, CQRS, Event Sourcing son patrones comunes en arquitecturas de microservicios.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+
+                    <!-- Tema 3-4 -->
+                    <div class="content-detail" id="tema3-4">
+                        <h3>🛠️ CLI Tools con Cobra</h3>
+                        <div class="content-body">
+                            <h4>Instalación y estructura:</h4>
+                            <pre><code># Instalar Cobra
+go get -u github.com/spf13/cobra
+
+# Estructura del proyecto
+/cmd
+  /root.go
+  /server.go
+  /config.go
+  /version.go
+/main.go</code></pre>
+
+                            <h4>Comando raíz:</h4>
+                            <pre><code>// cmd/root.go
+package cmd
+
+import (
+    "fmt"
+    "github.com/spf13/cobra"
+)
+
+var rootCmd = &cobra.Command{
+    Use:   "mi-cli",
+    Short: "Mi CLI tool",
+    Long:  `Una herramienta CLI completa construida con Cobra`,
+    PersistentPreRun: func(cmd *cobra.Command, args []string) {
+        // Configuración inicial
+    },
+}
+
+func Execute() {
+    if err := rootCmd.Execute(); err != nil {
+        fmt.Println(err)
+    }
+}</code></pre>
+
+                            <h4>Comandos personalizados:</h4>
+                            <pre><code>// cmd/server.go
+var (
+    port     string
+    host     string
+    debug    bool
+)
+
+var serverCmd = &cobra.Command{
+    Use:   "server",
+    Short: "Iniciar el servidor",
+    Run: func(cmd *cobra.Command, args []string) {
+        fmt.Printf("Iniciando servidor en %s:%s\n", host, port)
+        if debug {
+            fmt.Println("Modo debug activado")
+        }
+        // Iniciar servidor
+    },
+}
+
+func init() {
+    rootCmd.AddCommand(serverCmd)
+    
+    serverCmd.Flags().StringVarP(&port, "port", "p", "8080", "Puerto del servidor")
+    serverCmd.Flags().StringVarP(&host, "host", "H", "localhost", "Host del servidor")
+    serverCmd.Flags().BoolVarP(&debug, "debug", "d", false, "Modo debug")
+}</code></pre>
+
+                            <h4>Comando con subcomandos:</h4>
+                            <pre><code>// cmd/config.go
+var configCmd = &cobra.Command{
+    Use:   "config",
+    Short: "Gestionar configuración",
+}
+
+var configGetCmd = &cobra.Command{
+    Use:   "get [key]",
+    Short: "Obtener valor de configuración",
+    Args:  cobra.ExactArgs(1),
+    Run: func(cmd *cobra.Command, args []string) {
+        key := args[0]
+        value := getConfig(key)
+        fmt.Printf("%s=%s\n", key, value)
+    },
+}
+
+var configSetCmd = &cobra.Command{
+    Use:   "set [key] [value]",
+    Short: "Establecer valor de configuración",
+    Args:  cobra.ExactArgs(2),
+    Run: func(cmd *cobra.Command, args []string) {
+        setConfig(args[0], args[1])
+        fmt.Println("Configuración actualizada")
+    },
+}
+
+func init() {
+    rootCmd.AddCommand(configCmd)
+    configCmd.AddCommand(configGetCmd)
+    configCmd.AddCommand(configSetCmd)
+}</code></pre>
+
+                            <h4>Viper para configuración:</h4>
+                            <pre><code>import "github.com/spf13/viper"
+
+func initConfig() {
+    viper.SetConfigName("config")
+    viper.SetConfigType("yaml")
+    viper.AddConfigPath(".")
+    viper.AddConfigPath("$HOME/.mi-cli")
+    
+    viper.AutomaticEnv()
+    
+    if err := viper.ReadInConfig(); err != nil {
+        fmt.Println("Error leyendo config:", err)
+    }
+}
+
+// Uso
+port := viper.GetInt("server.port")
+debug := viper.GetBool("debug")</code></pre>
+
+                            <div class="info-box">
+                                <strong>💡 Ejemplos famosos:</strong> kubectl, docker CLI, hugo, y github CLI están construidos con Cobra.
+                            </div>
+                        </div>
+                        <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contenido" class="content">
+            <div class="container">
+                <h2>📚 Contenido del Curso</h2>
+
+                <div class="modules">
+                    <div class="module">
+                        <h3>Módulo 1: Fundamentos</h3>
+                        <ul>
+                            <li>Introducción a Go</li>
+                            <li>Instalación y configuración</li>
+                            <li>Variables y tipos de datos</li>
+                            <li>Funciones y control de flujo</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+
+                    <div class="module">
+                        <h3>Módulo 2: Intermedio</h3>
+                        <ul>
+                            <li>Structs y métodos</li>
+                            <li>Interfaces</li>
+                            <li>Concurrencia (goroutines, channels)</li>
+                            <li>Manejo de errores</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+
+                    <div class="module">
+                        <h3>Módulo 3: Avanzado</h3>
+                        <ul>
+                            <li>APIs HTTP/REST</li>
+                            <li>gRPC y Protocol Buffers</li>
+                            <li>Microservicios</li>
+                            <li>CLI tools con Cobra</li>
+                        </ul>
+                        <a href="#temas" class="btn-module">Ir a temas →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ejemplos" class="examples">
+            <div class="container">
+                <h2>📝 Ejemplos Rápidos</h2>
+
+                <div class="code-block">
+                    <h3>Variables y Tipos</h3>
+                    <pre><code class="language-go">package main
+
+import "fmt"
+
+func main() {
+    var nombre string = "Juan"
+    edad := 30
+    const PI = 3.1416
+
+    var (
+        usuario = "admin"
+        activo  = true
+    )
+
+    fmt.Println(nombre, edad, PI, usuario, activo)
+}</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <h3>Funciones con Múltiples Retornos</h3>
+                    <pre><code class="language-go">// Múltiples retornos
+func dividir(a, b float64) (float64, error) {
+    if b == 0 {
+        return 0, fmt.Errorf("división por cero")
+    }
+    return a / b, nil
+}
+
+// Función variádica
+func sumar(numeros ...int) int {
+    total := 0
+    for _, n := range numeros {
+        total += n
+    }
+    return total
+}</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <h3>Concurrencia con Goroutines</h3>
+                    <pre><code class="language-go">func trabajador(id int, jobs &lt;-chan int, results chan&lt;- int) {
+    for job := range jobs {
+        results <- job * 2
+    }
+}
+
+func main() {
+    jobs := make(chan int, 10)
+    results := make(chan int, 10)
+
+    for w := 1; w &lt;= 3; w++ {
+        go trabajador(w, jobs, results)
+    }
+
+    for j := 1; j &lt;= 5; j++ {
+        jobs <- j
+    }
+    close(jobs)
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="recursos" class="resources">
+            <div class="container">
+                <h2>📖 Recursos Adicionales</h2>
+
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>Documentación Oficial</h4>
+                        <ul>
+                            <li><a href="https://go.dev/doc/" target="_blank">Go Documentation</a></li>
+                            <li><a href="https://gobyexample.com/" target="_blank">Go by Example</a></li>
+                            <li><a href="https://go.dev/doc/effective_go" target="_blank">Effective Go</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h4>Herramientas</h4>
+                        <ul>
+                            <li>VS Code + Go extension</li>
+                            <li>GoLand - IDE de JetBrains</li>
+                            <li>golangci-lint</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <h4>Comunidades</h4>
+                        <ul>
+                            <li><a href="https://go.dev/community/" target="_blank">Go Community</a></li>
+                            <li>Stack Overflow - Go</li>
+                            <li>Reddit r/golang</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>👨‍💻 Desarrollado por Isaac Esteban Haro Torres</h2>
+                <p class="contact-title">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
+
+                <div class="contact-info">
+                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
+                    <p>📱 WhatsApp: 098805517</p>
+                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
+                    <p>🌐 Portafolio: <a href="https://ieharo1.github.io/portafolio-isaac.haro/" target="_blank">ieharo1.github.io/portafolio-isaac.haro/</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
