@@ -1,7 +1,7 @@
-// Main JavaScript para Golang Desde Cero (KRILIN-WORLD-UNITY)
+// Main JavaScript para Go Desde Cero
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🐹 Golang Desde Cero - Sitio cargado correctamente');
+    console.log('☕ Go Desde Cero - Sitio cargado correctamente');
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         const header = document.querySelector('.header');
         if (window.pageYOffset > 100) {
-            header.style.background = 'rgba(0, 86, 108, 0.98)';
-            header.style.boxShadow = '0 4px 30px rgba(0, 173, 216, 0.3)';
+            header.style.background = 'rgba(178, 88, 10, 0.98)';
+            header.style.boxShadow = '0 4px 30px rgba(248, 152, 32, 0.3)';
         } else {
             header.style.background = 'var(--secondary-color)';
             header.style.boxShadow = 'none';
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.code-block, .content-body pre').forEach(block => {
         const btn = document.createElement('button');
         btn.textContent = '📋 Copiar';
-        btn.style.cssText = 'position:absolute;top:10px;right:10px;background:var(--accent-color);color:var(--secondary-color);border:none;padding:8px 16px;border-radius:8px;cursor:pointer;font-size:0.85rem;font-weight:bold;z-index:10;';
+        btn.style.cssText = 'position:absolute;top:10px;right:10px;background:var(--accent-color);border:none;padding:5px 10px;border-radius:5px;cursor:pointer;font-size:0.8rem;z-index:10;';
         if (getComputedStyle(block).position === 'static') block.style.position = 'relative';
         block.appendChild(btn);
         btn.addEventListener('click', () => {
@@ -68,5 +68,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('%c🐹 ¡Bienvenido a Golang Desde Cero!', 'font-size: 20px; color: #00ADD8; font-weight: bold;');
+    console.log('%c☕ ¡Bienvenido a Go Desde Cero!', 'font-size: 20px; color: #00ADD8; font-weight: bold;');
 });
